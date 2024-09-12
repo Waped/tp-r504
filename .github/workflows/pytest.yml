@@ -10,4 +10,4 @@ jobs:
       - name: Install pytest
         run: pip3 install pytest
       - name: Run tests
-        run: pytest tp-r504/test.py
+        run: pytest test.py
