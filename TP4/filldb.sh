@@ -1,0 +1,1 @@
+mysql -u root --port=3307 --protocol=TCP -p'foo' < data.sql
