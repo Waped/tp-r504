@@ -1,4 +1,4 @@
-docker volume rm
+
 # Lnacement serveur sql
 docker run --rm -d \
 -p 3307:3306 \
