@@ -1,4 +1,4 @@
-docker stop $(dockerps -a -q) 
+docker stop $(docker ps -a -q) 
 docker rm $(docker ps -a -q)
 
 docker network prune -f

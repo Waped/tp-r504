@@ -11,4 +11,4 @@ COPY app_1.py /srv/
 
 EXPOSE 5000
 
-CMD ["flask", "--app", "/srv/app_1.py", "run", "--host=0.0.0.0"]
+CMD ["flask", "--app", "/srv/app_1.py", "run", "--host=0.0.0.0","--debug"]
