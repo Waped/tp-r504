@@ -1,3 +1,4 @@
+import re
 from flask import Flask, render_template
 import mysql.connector
 
@@ -11,27 +12,20 @@ db_config = {
     'database': 'demosql'
 }
 
+pattern = "[]"
 
+@app.route('/newuser/', methods=['GET', 'POST'])
+def new_user():
+    error_messages = []  # Liste pour les erreurs de validation
+    if request.method == 'POST':
+        username = request.form['username']
 
-@app.route('/')
-def index():
-    
-    # Initialize MySQL connection
-    conn = mysql.connector.connect(**db_config)
-    cursor = conn.cursor() 
+        
 
-    # Sample query
-    query = "SELECT * FROM myTable"
-    cursor.execute(query)
-    data = cursor.fetchall()
     
-    # Close the cursor and connection
-    cursor.close()
-    conn.close()
-    
-    return render_template('index.html', data=data)
+    return render_template('newuser.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
-    
+
 
